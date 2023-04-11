@@ -1,19 +1,11 @@
 #include <stdio.h>
-#include <main.h>
+#include <stdlib.h>
 
-/**
- * main -  print name
- *@argc: int.
- *@argv: char.
- * Return: Always 0.
- */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i;
+    char *program_name = argv[0];
 
-	for (i = 0; i < argc ; i++)
-	{
-		printf("%s\n", argv[i]);
-	}
-	return (0);
+    printf("%s\n", program_name);
+
+    return EXIT_SUCCESS;
 }
